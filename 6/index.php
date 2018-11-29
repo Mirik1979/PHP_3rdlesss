@@ -12,11 +12,20 @@
 			</div>
 			<!--сделано выравнивание по флекс технологии 15.02.2018 -->
 			<!--убрана горизонтальная прокрутка 16.02.2018 -->
-			<div class="menu">
-				<span>Главная</span>
-				<span><a href="catalogue.html">Каталог</a></span>
-				<span><a href="contacts.html">Контакты</a></span>
-			</div>		 
+			<ul class="menu">
+			<!--домашнее задание третьего урока -->
+			<?php
+				$menu = [
+					'main' => '<li>Главная</li>',   
+					'Catalogue' => '<li><a href="catalogue.html">Каталог</a></li>',   
+					'Contacts' => '<li><a href="contacts.html">Контакты</a></li>' 
+				];
+				foreach($menu as $key => $item)
+				{
+					echo "$item";				
+				}	
+			?>
+			</ul>		 
 		</div>
 	</header>
 		<div class="center">
@@ -39,7 +48,7 @@
 				<a href="#"></a>			
 			</div>	
 			<div class="footer_text"><span>Все права защищены</span>
-			<!--домашнее задание -->
+			<!--домашнее задание второго урока -->
 			<?php
 			$current_year = date ( 'Y' );
 			echo "© SiteName.ru 2017-".$current_year; 
